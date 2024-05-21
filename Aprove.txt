@@ -1,5 +1,6 @@
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local UserInputService = game:GetService("UserInputService")
 local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 
@@ -8,15 +9,21 @@ screenGui.Parent = playerGui
 
 local frame = Instance.new("Frame")
 frame.Size = UDim2.new(0.3, 0, 0.5, 0)
-frame.Position = UDim2.new(0.7, 0, 0.5, 0) -- Ajustado para o canto inferior direito
-frame.BackgroundTransparency = 0.5
-frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+frame.Position = UDim2.new(0.7, 0, 0.5, 0) -- Posicionamento ajustado para o canto inferior direito
+frame.BackgroundTransparency = 0.5 -- Adicionando transparência para ver o jogo por trás
+frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255) -- Alterando a cor de fundo para facilitar a visualização
 frame.Parent = screenGui
 
-local scrollFrame = Instance.new("ScrollingFrame")
+local scrollFrame = Instance.new("ScrollingFrame") -- Criando um ScrollingFrame para permitir a rolagem
 scrollFrame.Size = UDim2.new(1, 0, 1, 0)
 scrollFrame.Position = UDim2.new(0, 0, 0, 0)
 scrollFrame.Parent = frame
+scrollFrame.ScrollBarThickness = 16 -- Adicionando barras de rolagem
+
+local container = Instance.new("Frame")
+container.Size = UDim2.new(1, 0, 1, 0)
+container.BackgroundTransparency = 1
+container.Parent = scrollFrame
 
 local carList = {
     "Audio Super Sedan 2004", "Audio T5 2016", "BAP Tornado 1.8 turbo 2023", 
@@ -81,25 +88,67 @@ local carList = {
     "Yamaha Xj6 2020", "Zuzuki Jimy Serra 2023"
 }
 
-local function spawnCar(carName)
-    ReplicatedStorage:WaitForChild("SpawnCar"):FireServer(carName)
-end
-
--- Configuração do layout dos botões
+local buttonWidth = 150
 local buttonHeight = 30
 local buttonSpacing = 5
+local rowSpacing = 5
+local buttonsPerRow = 3
+local xPosition = 0
 local yPosition = 0
 
 for i, carName in ipairs(carList) do
     local button = Instance.new("TextButton")
-    button.Size = UDim2.new(1, 0, 0, buttonHeight)
-    button.Position = UDim2.new(0, 0, 0, yPosition)
+    button.Size = UDim2.new(0, buttonWidth, 0, buttonHeight)
+    button.Position = UDim2.new(0, xPosition, 0, yPosition)
     button.Text = carName
-    button.Parent = scrollFrame
+    button.Parent = container
 
     button.MouseButton1Click:Connect(function()
         spawnCar(carName)
     end)
 
-    yPosition = yPosition + buttonHeight + buttonSpacing
+    xPosition = xPosition + buttonWidth + buttonSpacing
+    if i % buttonsPerRow == 0 then
+        xPosition = 0
+        yPosition = yPosition + buttonHeight + rowSpacing
+    end
 end
+
+-- Função para permitir arrastar o GUI
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+local function update(input)
+    local delta = input.Position - dragStart
+    screenGui.Enabled = false
+    frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+
+frame.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = frame.Position
+
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+                screenGui.Enabled = true
+            end
+        end)
+    end
+end)
+
+frame.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        dragInput = input
+    end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+    if input == dragInput and dragging then
+        update(input)
+    end
+end)
