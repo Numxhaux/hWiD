@@ -8,12 +8,12 @@ screenGui.Parent = playerGui
 
 local frame = Instance.new("Frame")
 frame.Size = UDim2.new(0.3, 0, 0.5, 0)
-frame.Position = UDim2.new(0.7, 0, 0.5, 0) -- Posicionamento ajustado para o canto inferior direito
-frame.BackgroundTransparency = 0.5 -- Adicionando transparência para ver o jogo por trás
-frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255) -- Alterando a cor de fundo para facilitar a visualização
+frame.Position = UDim2.new(0.7, 0, 0.5, 0) -- Ajustado para o canto inferior direito
+frame.BackgroundTransparency = 0.5
+frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 frame.Parent = screenGui
 
-local scrollFrame = Instance.new("ScrollingFrame") -- Criando um ScrollingFrame para permitir a rolagem
+local scrollFrame = Instance.new("ScrollingFrame")
 scrollFrame.Size = UDim2.new(1, 0, 1, 0)
 scrollFrame.Position = UDim2.new(0, 0, 0, 0)
 scrollFrame.Parent = frame
@@ -24,10 +24,10 @@ local carList = {
     "BD Song Plus 2024", "BD Yuan Plus 2024", "BKM 320i 2022", "Biz 125", 
     "Bm MIni-BM 2023", "Brutos 2500 Larime 2023", "CIA Best-Van 2002 - Escolar", 
     "CIA Best-Van 2002 BASE", "CIA Best-Van 2002 Cargo", "CIA Best-Van 2002 Super", 
-    "Cedez 1113 / Carga De Madeira", "Cedez Actros 2010", "Cedez Atros ba\195\186 2015", 
+    "Cedez 1113 / Carga De Madeira", "Cedez Actros 2010", "Cedez Atros baú 2015", 
     "Cedez E200 2010", "Cherry Tiggo 7 PRO 2024", "Cherry Tiggo 7 Sport 2024", 
     "Chev Celestial EXECUTIVE 2003", "Chev Celestial SPORT 2003", "Chev Celtazul LIFE 1.0 2010", 
-    "Chev Celtazul LTZ 1.4 2010", "Chev Ce\195\186 Ta Azul 2004", "Chev Chevete 1998", 
+    "Chev Celtazul LTZ 1.4 2010", "Chev Ceû Ta Azul 2004", "Chev Chevete 1998", 
     "Chev Diplomacy 1995", "Chev Equinox 2020", "Chev Montanha Premier 2023", 
     "Chev Montanha Premier Especial RS 2023", "Chev Montanha Premier II 2023", 
     "Chev Montanha Start 2023", "Chev NEX 2022", "Chev NEX Plus 2022", "Chev Onix 2014", 
@@ -47,7 +47,7 @@ local carList = {
     "Fort Ranger PRF 2014", "Fort VEN 2015", "Fort VEN 2015 Beater", "Honda Xre 300 Rally 2022", 
     "Hondai Start 160", "Jiangsu 360 2010", "Lata Niva 1990", "Lata Riva 1980", "Lotos Espirit 1976", 
     "Maranello 458 Spyder 2012", "Maranello f12 berlinetta 2013", "Marcopolo G6 1200 nacional", 
-    "Marcopolo Ideale 2015", "Melhor Carro Sem D\195\186vidas", "Mercedes 1113 | Carga De Areia", 
+    "Marcopolo Ideale 2015", "Melhor Carro Sem Dúvidas", "Mercedes 1113 | Carga De Areia", 
     "Mercedes Accelo 915", "Mercedes Benz 1620 (Container)", "Mercedes LP321 1963", 
     "Mercedes LS | Carga De Areia", "Mit Eclipse 1999", "Mit Florest 2005", "Mit L200 4x4 2023", 
     "Mit Lancia 2012", "Mit Lancia R-PLUS 4X4 2019", "Mit MitSUV 2014", "Nikola Model Y 2023", 
@@ -55,19 +55,19 @@ local carList = {
     "Nissin Frontier Platinum 2024", "Nissin Frontier SE  2024", "Nissin GT Line Base 1999", 
     "Nissin GT Line R 1999", "Nissin GT Line R 2022", "Nissin Marcha 2013", "Nissin SL 2010", 
     "Nissin SedanSuper Basemodel 2023", "Nissin SedanSuper Luxo 2023", "Nissin Supra 1998", 
-    "On\195\167a GT 1972", "Paradiso 1600 LD", "Pegeot 208 1.6 Active 2023", 
+    "Onça GT 1972", "Paradiso 1600 LD", "Pegeot 208 1.6 Active 2023", 
     "Pegeot 208 1.6 Allure TURBO  2024", "Pegeot 208 Like 1.0 2023", "Pejo 07 Passeio 2012", 
     "Rondai Civic Type R 2024", "Rondai Civil 2010", "Rondai Fit 2015", "Rondai HR-F 2023", 
     "Rondai Hatch Smart 2021", "Rondai Smart 2007", "Rondai Urban Black 2023", 
     "Rondai Urban Platinum 2023", "Rult Claro 2007", "Rult Claro 2007 - Usado", "Rult Claro 2013", 
-    "Rult Compact 2020", "Rult Compact Inteso 2020", "Rult Compact Lifer 2020", "Rult Compact Sider 2020", 
+    "Rult Compact 2020", "Rult Compact Intenso 2020", "Rult Compact Lifer 2020", "Rult Compact Sider 2020", 
     "Rult Desert 2022", "Rult Duster 2WD 2023", "Rult Duster 4WD 2023", "Rult Sandro RS 2017", 
-    "Rult Twist 2002", "Rult coelho", "Scana 124G", "Scania 1115 Carga de Container", 
+    "Rult Twist 2002", "Rult coelho", "Scania 124G", "Scania 1115 Carga de Container", 
     "Scania Flecha Azul", "Tigre F-Space 2023", "Tokyo Aris 2021", "Tokyo Aris Plus 2021", 
     "Tokyo Corolla 2023", "Tokyo Etios XLS 2015", "Tokyo Express 2003", "Undai HB20 Sense 2024", 
     "Undai IX35 2014", "Undai hb20s 2015", "Vagen Gol 1.6 2011", "Van do SAMU", "Volve XC60 2023", 
     "WBM M SPORT Fast 2023", "WBM X5 M 2023", "WBM X70 DRIVE 2023", "WBM X70 DRIVE EXECUTIVE 2023", 
-    "Wagen AMD S\195\179lum 2015", "Wagen Besouro 1973", "Wagen Bol 2022", "Wagen Bol CL 1993", 
+    "Wagen AMD Sólum 2015", "Wagen Besouro 1973", "Wagen Bol 2022", "Wagen Bol CL 1993", 
     "Wagen Bol G2 Plus 1995", "Wagen Bol G3 2000", "Wagen Bol Last Edition 2022", 
     "Wagen Caio Apache Vip IV 2017", "Wagen Golf GTI 2018", "Wagen Hard Work 1993", 
     "Wagen Hard Work 2010", "Wagen Hard Work Surf 2010", "Wagen Hard Work Surf PRF 2010", 
