@@ -8,8 +8,15 @@ screenGui.Parent = playerGui
 
 local frame = Instance.new("Frame")
 frame.Size = UDim2.new(0.3, 0, 0.5, 0)
-frame.Position = UDim2.new(0.35, 0, 0.25, 0)
+frame.Position = UDim2.new(0.7, 0, 0.5, 0) -- Posicionamento ajustado para o canto inferior direito
+frame.BackgroundTransparency = 0.5 -- Adicionando transparência para ver o jogo por trás
+frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255) -- Alterando a cor de fundo para facilitar a visualização
 frame.Parent = screenGui
+
+local scrollFrame = Instance.new("ScrollingFrame") -- Criando um ScrollingFrame para permitir a rolagem
+scrollFrame.Size = UDim2.new(1, 0, 1, 0)
+scrollFrame.Position = UDim2.new(0, 0, 0, 0)
+scrollFrame.Parent = frame
 
 local carList = {
     "Audio Super Sedan 2004", "Audio T5 2016", "BAP Tornado 1.8 turbo 2023", 
@@ -78,14 +85,21 @@ local function spawnCar(carName)
     ReplicatedStorage:WaitForChild("SpawnCar"):FireServer(carName)
 end
 
+-- Configuração do layout dos botões
+local buttonHeight = 30
+local buttonSpacing = 5
+local yPosition = 0
+
 for i, carName in ipairs(carList) do
     local button = Instance.new("TextButton")
-    button.Size = UDim2.new(1, 0, 0.05, 0)
-    button.Position = UDim2.new(0, 0, (i - 1) * 0.05, 0)
+    button.Size = UDim2.new(1, 0, 0, buttonHeight)
+    button.Position = UDim2.new(0, 0, 0, yPosition)
     button.Text = carName
-    button.Parent = frame
+    button.Parent = scrollFrame
 
     button.MouseButton1Click:Connect(function()
         spawnCar(carName)
     end)
+
+    yPosition = yPosition + buttonHeight + buttonSpacing
 end
