@@ -1,0 +1,667 @@
+-- ts file was generated at discord.gg/25ms
+
+
+local vu1 = {
+    ["63298562"] = 0,
+    ["9fd82g3jklw"] = 0,
+    gfd9834jdfj = 0,
+    ["7kdfj38h9f0"] = 0,
+    h398g34hfw9 = 0,
+    fg2j = 0,
+    a3478fhbi3 = 1,
+    jd934jf2jf = 1,
+    ["2f3j8dfh39f"] = 1,
+    oiwueh8fw93 = 1,
+    xjfd0938gjf = 1,
+    df81 = 1,
+    g4398hng43oyfh89o34 = 2,
+    d73jd9f8hwe = 2,
+    r8h3jf9j23f = 2,
+    m3kfdj832hf = 2,
+    ["4jh8sd93hf9"] = 2,
+    c7l2 = 2,
+    ["78634fsdehbf4e89o"] = 3,
+    jh489fhwej0 = 3,
+    pjf3098rjdw = 3,
+    jfh894jf39f = 3,
+    fdj3hf9je3f = 3,
+    bo27 = 3,
+    lq1y = 4,
+    ["8twsediol234y5908"] = 4,
+    kd94jf93jwe = 4,
+    ["9fdj3k8wefw"] = 4,
+    mfs9834jfd9 = 4,
+    sd84jfd9wej = 4,
+    stuy = 5,
+    itgdew8934y89034i = 5,
+    pwe94jf39j2 = 5,
+    kdf98jw3jf9 = 5,
+    mfw93jf90ej = 5,
+    ["1fjw83jf90w"] = 5,
+    stuy = 5,
+    ["87t43gfh8il9owe4fo"] = 6,
+    fj984jfd3jw = 6,
+    pq9834jf39w = 6,
+    ["92fj384hf9j"] = 6,
+    ["98fjd93hf9w"] = 6,
+    uak1 = 6,
+    ["8tweulir3g4fci7864"] = 7,
+    q83fj934jf9 = 7,
+    jw98fj3hf9w = 7,
+    zx83jf93jfw = 7,
+    mfd93jf92hw = 7,
+    t2hu = 7,
+    t7834rhn9043y89o = 8,
+    kfj394hf9jw = 8,
+    pwe84jf93jw = 8,
+    ["2jd8fj39jfw"] = 8,
+    ld93jf93jfw = 8,
+    g532 = 8,
+    ktgrc378236b8o79ty = 9,
+    mf93jf93hfw = 9,
+    sjd83jf93jw = 9,
+    ["8fj39jf92jw"] = 9,
+    fj983jf39jw = 9,
+    u34k = 9
+}
+pcall(function()
+    keytest = readfile("legoluadata5")
+end)
+pcall(function()
+    file = writefile
+end)
+if keytest ~= nil then
+    local v2 = readfile("legoluadata5"):split("_")
+    local v3, v4, v5 = pairs(v2)
+    local v6 = {}
+    local function v13(p7)
+        local v8, v9, v10 = pairs(vu1)
+        local v11 = nil
+        while true do
+            local v12
+            v10, v12 = v8(v9, v10)
+            if v10 == nil then
+                break
+            end
+            if p7 == v10 then
+                v11 = v12
+            end
+        end
+        return v11
+    end
+    while true do
+        local v14, v15 = v3(v4, v5)
+        if v14 == nil then
+            break
+        end
+        v5 = v14
+        local v16 = v15:split("-")
+        if # v16 >= 3 then
+            if # v16 <= 2 or # v16 >= 5 then
+                if # v16 > 5 and # v16 < 7 then
+                    rawset(v6, v14, v13(v16[1]) .. v13(v16[2]) .. v13(v16[3]) .. v13(v16[4]) .. v13(v16[5]) .. v13(v16[6]))
+                end
+            else
+                rawset(v6, v14, v13(v16[1]) .. v13(v16[2]) .. v13(v16[3]) .. v13(v16[4]))
+            end
+        else
+            rawset(v6, v14, v13(v16[1]) .. v13(v16[2]))
+        end
+    end
+    local v17, v18, v19 = pairs(v6)
+    while true do
+        local v20
+        v19, v20 = v17(v18, v19)
+        if v19 == nil then
+            break
+        end
+        decryption = v6[1] .. "/" .. v6[2] .. "/" .. v6[3] .. "/" .. v6[4] .. "/" .. v6[5]
+    end
+    local v21 = tonumber(decryption:split("/")[4])
+    tonumber(decryption:split("/")[3])
+    tonumber(decryption:split("/")[2])
+    local v22 = tostring(decryption:split("/")[3]):split("")[1]
+    local _ = tostring(decryption:split("/")[3]):split("")[2]
+    local _ = tostring(decryption:split("/")[2]):split("")[1]
+    local v23 = tostring(decryption:split("/")[2]):split("")[2]
+    local v24 = tonumber(decryption:split("/")[1])
+    local v25
+    if tostring(v22) == "0" then
+        v25 = tonumber(tostring(decryption:split("/")[3]):split("")[2])
+    else
+        v25 = tonumber(decryption:split("/")[3])
+    end
+    local v26
+    if tostring(v23) == "0" then
+        v26 = tonumber(tostring(decryption:split("/")[2]):split("")[2])
+    else
+        v26 = tonumber(decryption:split("/")[2])
+    end
+    local v27 = os.time()
+    local v28 = decryption:split("/")[5]
+    local v29 = tonumber(v28:split("")[1])
+    local v30 = os.time({
+        year = v21,
+        month = v25,
+        day = v26 + v29,
+        hour = v24
+    })
+    if v30 > v27 and v27 < v30 then
+        getfenv().greenlight = true
+    end
+end
+local vu31 = "LegoLua_Key_A9X7Q2L"
+local vu32 = "nizkcracked"
+local vu33 = {
+    windowcount = 0
+}
+local vu34 = {}
+local vu35 = {}
+local vu36 = game:GetService("Players").LocalPlayer:GetMouse()
+local vu37 = game:GetService("UserInputService")
+local vu38 = game:GetService("RunService").Heartbeat
+function vu34.new(pu39)
+    local v40, v41 = pcall(function()
+        return pu39.MouseEnter
+    end)
+    if v40 then
+        pu39.Active = true
+        v41:connect(function()
+            local vu44 = pu39.InputBegan:connect(function(p42)
+                if p42.UserInputType == Enum.UserInputType.MouseButton1 or p42.UserInputType == Enum.UserInputType.Touch then
+                    local v43 = Vector2.new(vu36.X - pu39.AbsolutePosition.X, vu36.Y - pu39.AbsolutePosition.Y)
+                    while vu38:wait() and vu37:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) do
+                        pu39:TweenPosition(UDim2.new(0, vu36.X - v43.X + pu39.Size.X.Offset * pu39.AnchorPoint.X, 0, vu36.Y - v43.Y + pu39.Size.Y.Offset * pu39.AnchorPoint.Y), "Out", "Quad", 0.1, true)
+                    end
+                end
+            end)
+            local vu45 = nil
+            vu45 = pu39.MouseLeave:connect(function()
+                vu44:disconnect()
+                vu45:disconnect()
+            end)
+        end)
+    end
+end
+function vu35.new(pu46, pu47)
+    pu46:GetPropertyChangedSignal("AbsoluteSize"):connect(function()
+        pu47.Size = UDim2.new(pu47.Size.X.Scale, pu47.Size.X.Offset, pu47.Size.Y.Scale, pu46.AbsoluteSize.Y)
+    end)
+end
+local vu48 = {
+    txtcolor = Color3.fromRGB(255, 255, 255),
+    underline = Color3.fromRGB(0, 255, 140),
+    barcolor = Color3.fromRGB(40, 40, 40),
+    bgcolor = Color3.fromRGB(30, 30, 30)
+}
+function vu33.Create(_, p49, p50)
+    local v51 = Instance.new(p49)
+    local v52 = next
+    local v53 = p50
+    local v54 = nil
+    while true do
+        local v55
+        v54, v55 = v52(p50, v54)
+        if v54 == nil then
+            break
+        end
+        if v54 ~= "Parent" then
+            v51[v54] = v55
+        end
+    end
+    v51.Parent = v53.Parent
+    return v51
+end
+function vu33.CreateWindow(p56, p57)
+    assert(p57.text, "no name")
+    local vu58 = {
+        count = 0,
+        toggles = {},
+        closed = false
+    }
+    local vu59 = p57 or {}
+    local v60 = {
+        __index = vu48
+    }
+    setmetatable(vu59, v60)
+    p56.windowcount = p56.windowcount + 1
+    vu33.gui = vu33.gui or p56:Create("ScreenGui", {
+        Name = "UILibrary",
+        Parent = game:GetService("CoreGui")
+    })
+    vu58.frame = p56:Create("Frame", {
+        Name = vu59.text,
+        Parent = p56.gui,
+        Active = true,
+        BackgroundTransparency = 0,
+        Size = UDim2.new(0, 190, 0, 30),
+        Position = UDim2.new(0, 15 + (200 * p56.windowcount - 200), 0, 15),
+        BackgroundColor3 = vu59.barcolor,
+        BorderSizePixel = 0
+    })
+    vu58.background = p56:Create("Frame", {
+        Name = "Background",
+        Parent = vu58.frame,
+        BorderSizePixel = 0,
+        BackgroundColor3 = vu59.bgcolor,
+        Position = UDim2.new(0, 0, 1, 0),
+        Size = UDim2.new(1, 0, 0, 25),
+        ClipsDescendants = true
+    })
+    vu58.container = p56:Create("Frame", {
+        Name = "Container",
+        Parent = vu58.frame,
+        BorderSizePixel = 0,
+        BackgroundColor3 = vu59.bgcolor,
+        Position = UDim2.new(0, 0, 1, 0),
+        Size = UDim2.new(1, 0, 0, 25),
+        ClipsDescendants = true
+    })
+    vu58.organizer = p56:Create("UIListLayout", {
+        Name = "Sorter",
+        SortOrder = Enum.SortOrder.LayoutOrder,
+        Parent = vu58.container
+    })
+    vu58.padder = p56:Create("UIPadding", {
+        Name = "Padding",
+        PaddingLeft = UDim.new(0, 10),
+        PaddingTop = UDim.new(0, 5),
+        Parent = vu58.container
+    })
+    p56:Create("Frame", {
+        Name = "Underline",
+        Size = UDim2.new(1, 0, 0, 1),
+        Position = UDim2.new(0, 0, 1, - 1),
+        BorderSizePixel = 0,
+        BackgroundColor3 = vu59.underline,
+        Parent = vu58.frame
+    })
+    local vu61 = p56:Create("TextButton", {
+        Name = "Toggle",
+        ZIndex = 2,
+        BackgroundTransparency = 1,
+        Position = UDim2.new(1, - 25, 0, 0),
+        Size = UDim2.new(0, 25, 1, 0),
+        Text = "-",
+        TextSize = 17,
+        TextColor3 = vu59.txtcolor,
+        Font = Enum.Font.FredokaOne,
+        Parent = vu58.frame
+    })
+    vu61.MouseButton1Click:connect(function()
+        vu58.closed = not vu58.closed
+        vu61.Text = vu58.closed and "+" or "-"
+        if vu58.closed then
+            vu58:Resize(true, UDim2.new(1, 0, 0, 0))
+        else
+            vu58:Resize(true)
+        end
+    end)
+    p56:Create("TextLabel", {
+        Size = UDim2.new(1, 0, 1, 0),
+        BackgroundTransparency = 1,
+        BorderSizePixel = 0,
+        TextColor3 = vu59.txtcolor,
+        TextColor3 = vu59.bartextcolor or Color3.fromRGB(255, 255, 255),
+        TextSize = 17,
+        Font = Enum.Font.FredokaOne,
+        Text = vu59.text or "window",
+        Name = "Window",
+        Parent = vu58.frame
+    })
+    vu34.new(vu58.frame)
+    vu35.new(vu58.background, vu58.container)
+    local function vu67()
+        local v62 = next
+        local v63, v64 = vu58.container:GetChildren()
+        local v65 = 0
+        while true do
+            local v66
+            v64, v66 = v62(v63, v64)
+            if v64 == nil then
+                break
+            end
+            if not (v66:IsA("UIListLayout") or v66:IsA("UIPadding")) then
+                v65 = v65 + v66.AbsoluteSize.Y
+            end
+        end
+        return UDim2.new(1, 0, 0, v65 + 10)
+    end
+    function vu58.Resize(p68, p69, p70)
+        local v71 = p70 or vu67()
+        p68.container.ClipsDescendants = true
+        if p69 then
+            p68.background:TweenSize(v71, "Out", "Sine", 0.5, true)
+        else
+            p68.background.Size = v71
+        end
+    end
+    function vu58.AddToggle(pu72, pu73, p74)
+        pu72.count = pu72.count + 1
+        local vu75 = p74 or function()
+        end
+        local v76 = vu33:Create("TextLabel", {
+            Text = pu73,
+            Size = UDim2.new(1, - 10, 0, 20),
+            BackgroundTransparency = 1,
+            TextColor3 = Color3.fromRGB(255, 255, 255),
+            TextXAlignment = Enum.TextXAlignment.Left,
+            LayoutOrder = pu72.Count,
+            TextSize = 14,
+            Font = Enum.Font.FredokaOne,
+            Parent = pu72.container
+        })
+        local vu77 = vu33:Create("TextButton", {
+            Text = "OFF",
+            TextColor3 = Color3.fromRGB(255, 25, 25),
+            BackgroundTransparency = 1,
+            Position = UDim2.new(1, - 25, 0, 0),
+            Size = UDim2.new(0, 25, 1, 0),
+            TextSize = 17,
+            Font = Enum.Font.FredokaOne,
+            Parent = v76
+        })
+        vu77.MouseButton1Click:connect(function()
+            pu72.toggles[pu73] = not pu72.toggles[pu73]
+            vu77.TextColor3 = pu72.toggles[pu73] and Color3.fromRGB(0, 255, 140) or Color3.fromRGB(255, 25, 25)
+            vu77.Text = pu72.toggles[pu73] and "ON" or "OFF"
+            vu75(pu72.toggles[pu73])
+        end)
+        pu72:Resize()
+        return vu77
+    end
+    function vu58.AddBox(p78, p79, p80)
+        p78.count = p78.count + 1
+        local vu81 = p80 or function()
+        end
+        local vu82 = vu33:Create("TextBox", {
+            PlaceholderText = p79,
+            Size = UDim2.new(1, - 10, 0, 20),
+            BackgroundTransparency = 0.75,
+            BackgroundColor3 = vu59.boxcolor,
+            TextColor3 = Color3.fromRGB(255, 255, 255),
+            TextXAlignment = Enum.TextXAlignment.Center,
+            TextSize = 14,
+            Text = "",
+            Font = Enum.Font.FredokaOne,
+            LayoutOrder = p78.Count,
+            BorderSizePixel = 0,
+            Parent = p78.container
+        })
+        vu82.FocusLost:connect(function(...)
+            vu81(vu82, ...)
+        end)
+        p78:Resize()
+        return vu82
+    end
+    function vu58.AddButton(p83, p84, p85)
+        p83.count = p83.count + 1
+        local v86 = vu33:Create("TextButton", {
+            Text = p84,
+            Size = UDim2.new(1, - 10, 0, 20),
+            BackgroundTransparency = 1,
+            TextColor3 = Color3.fromRGB(255, 255, 255),
+            TextXAlignment = Enum.TextXAlignment.Left,
+            TextSize = 14,
+            Font = Enum.Font.FredokaOne,
+            LayoutOrder = p83.Count,
+            Parent = p83.container
+        })
+        v86.MouseButton1Click:connect(p85 or function()
+        end)
+        p83:Resize()
+        return v86
+    end
+    function vu58.AddLabel(p87, p88)
+        p87.count = p87.count + 1
+        local v89 = game:GetService("TextService"):GetTextSize(p88, 16, Enum.Font.FredokaOne, Vector2.new(math.huge, math.huge))
+        local v90 = vu33:Create("TextLabel", {
+            Text = p88,
+            Size = UDim2.new(1, - 10, 0, v89.Y + 5),
+            TextScaled = false,
+            BackgroundTransparency = 1,
+            TextColor3 = Color3.fromRGB(255, 255, 255),
+            TextXAlignment = Enum.TextXAlignment.Left,
+            TextSize = 14,
+            Font = Enum.Font.FredokaOne,
+            LayoutOrder = p87.Count,
+            Parent = p87.container
+        })
+        p87:Resize()
+        return v90
+    end
+    function vu58.AddDropdown(pu91, pu92, p93)
+        pu91.count = pu91.count + 1
+        local v94 = pu92[1] or ""
+        local vu95 = p93 or function()
+        end
+        local vu96 = vu33:Create("TextLabel", {
+            Size = UDim2.new(1, - 10, 0, 20),
+            BackgroundTransparency = 0.75,
+            BackgroundColor3 = pu92.boxcolor,
+            TextColor3 = Color3.fromRGB(255, 255, 255),
+            TextXAlignment = Enum.TextXAlignment.Center,
+            TextSize = 14,
+            Text = v94,
+            Font = Enum.Font.FredokaOne,
+            BorderSizePixel = 0,
+            LayoutOrder = pu91.Count,
+            Parent = pu91.container
+        })
+        local v97 = vu33:Create("ImageButton", {
+            BackgroundTransparency = 1,
+            Image = "rbxassetid://3234893186",
+            Size = UDim2.new(0, 18, 1, 0),
+            Position = UDim2.new(1, - 20, 0, 0),
+            Parent = vu96
+        })
+        local vu98 = nil
+        local function vu106(p99)
+            local v100 = game:GetService("UserInputService"):GetMouseLocation()
+            local v101 = Vector2.new(v100.X, v100.Y - 36)
+            local v102 = p99.AbsolutePosition.X
+            local v103 = p99.AbsolutePosition.X + p99.AbsoluteSize.X
+            local v104 = p99.AbsolutePosition.Y
+            local v105 = p99.AbsolutePosition.Y + p99.AbsoluteSize.Y
+            return v102 <= v101.X and (v101.X <= v103 and (v104 <= v101.Y and v101.Y <= v105))
+        end
+        local function vu112(p107)
+            local v108 = next
+            local v109 = nil
+            local v110 = 0
+            while true do
+                local v111
+                v109, v111 = v108(p107, v109)
+                if v109 == nil then
+                    break
+                end
+                v110 = v110 + 1
+            end
+            return v110
+        end
+        v97.MouseButton1Click:connect(function()
+            if vu112(pu92) ~= 0 then
+                if vu98 then
+                    vu98:Destroy()
+                    vu98 = nil
+                end
+                pu91.container.ClipsDescendants = false
+                vu98 = vu33:Create("Frame", {
+                    Position = UDim2.new(0, 0, 1, 0),
+                    BackgroundColor3 = Color3.fromRGB(0, 255, 255),
+                    Size = UDim2.new(0, vu96.AbsoluteSize.X, 0, vu112(pu92) * 21),
+                    BorderSizePixel = 0,
+                    Parent = vu96,
+                    ClipsDescendants = true,
+                    ZIndex = 2
+                })
+                vu33:Create("UIListLayout", {
+                    Name = "Layout",
+                    Parent = vu98
+                })
+                local v113 = next
+                local v114 = pu92
+                local v115 = nil
+                while true do
+                    local vu116
+                    v115, vu116 = v113(v114, v115)
+                    if v115 == nil then
+                        break
+                    end
+                    vu33:Create("TextButton", {
+                        Text = vu116,
+                        BackgroundColor3 = Color3.fromRGB(40, 40, 40),
+                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        BorderSizePixel = 0,
+                        TextSize = 14,
+                        Font = Enum.Font.FredokaOne,
+                        Size = UDim2.new(1, 0, 0, 21),
+                        Parent = vu98,
+                        ZIndex = 2
+                    }).MouseButton1Click:connect(function()
+                        vu96.Text = vu116
+                        vu95(vu116)
+                        vu98.Size = UDim2.new(1, 0, 0, 0)
+                        game:GetService("Debris"):AddItem(vu98, 0.1)
+                    end)
+                end
+            end
+        end)
+        game:GetService("UserInputService").InputBegan:connect(function(p117)
+            if p117.UserInputType == Enum.UserInputType.MouseButton1 and (vu98 and not vu106(vu98)) then
+                game:GetService("Debris"):AddItem(vu98)
+            end
+        end)
+        vu95(v94)
+        pu91:Resize()
+        return {
+            Refresh = function(_, p118)
+                game:GetService("Debris"):AddItem(vu98)
+                pu92 = p118
+                vu96.Text = pu92[1]
+            end
+        }
+    end
+    return vu58
+end
+if getfenv().greenlight == true then
+    if getfenv().greenlight then
+        return vu33
+    end
+else
+    local v119 = vu33
+    local v120 = vu33.CreateWindow(v119, {
+        text = "Key System - Cracked by Nizk <3 / Pass: nizkcracked"
+    })
+    keysystem = v120:AddBox("Enter Key", function(p121, p122)
+        if p122 then
+            if tostring(p121.Text) == vu32 or tostring(p121.Text) == vu31 then
+                local function v135(p123)
+                    local v124, v125, v126 = pairs(vu1)
+                    local v127 = {}
+                    local v128 = nil
+                    while true do
+                        local v129
+                        v126, v129 = v124(v125, v126)
+                        if v126 == nil then
+                            break
+                        end
+                        if v129 == p123 then
+                            table.insert(v127, v126)
+                        end
+                    end
+                    local v130 = math.random(1, # v127)
+                    local v131, v132, v133 = pairs(v127)
+                    while true do
+                        local v134
+                        v133, v134 = v131(v132, v133)
+                        if v133 == nil then
+                            break
+                        end
+                        if v133 == v130 then
+                            v128 = v134
+                        end
+                    end
+                    return v128
+                end
+                local v136 = os.date("*t")
+                local v137 = string.format("%02d/%02d/%02d/%d", v136.hour, v136.day, v136.month, v136.year)
+                if tostring(p121.Text) ~= vu32 then
+                    if tostring(p121.Text) == vu31 then
+                        lol = v137 .. "/111111"
+                    end
+                else
+                    lol = v137 .. "/333333"
+                end
+                local v138 = string.gsub(lol, "/", ","):split()
+                local v139, v140, v141 = pairs(v138)
+                local v142 = {}
+                while true do
+                    local v143
+                    v141, v143 = v139(v140, v141)
+                    if v141 == nil then
+                        break
+                    end
+                    table.insert(v142, v143)
+                end
+                local v144, v145, v146 = pairs(v142)
+                while true do
+                    local v147
+                    v146, v147 = v144(v145, v146)
+                    if v146 == nil then
+                        break
+                    end
+                    if # v147:split("") >= 3 then
+                        if # v147:split("") <= 2 or # v147:split("") >= 5 then
+                            if # v147:split("") > 5 and # v147:split("") < 7 then
+                                local v148 = v135(tonumber(v147:split("")[1])) .. "-" .. v135(tonumber(v147:split("")[2])) .. "-" .. v135(tonumber(v147:split("")[3])) .. "-" .. v135(tonumber(v147:split("")[4]))
+                                rawset(v142, v146, v148)
+                            end
+                        else
+                            local v149 = v135(tonumber(v147:split("")[1])) .. "-" .. v135(tonumber(v147:split("")[2])) .. "-" .. v135(tonumber(v147:split("")[3])) .. "-" .. v135(tonumber(v147:split("")[4]))
+                            rawset(v142, v146, v149)
+                        end
+                    else
+                        local v150 = v135(tonumber(v147:split("")[1])) .. "-" .. v135(tonumber(v147:split("")[2]))
+                        rawset(v142, v146, v150)
+                    end
+                end
+                local v151, v152, v153 = pairs(v142)
+                while true do
+                    local v154
+                    v153, v154 = v151(v152, v153)
+                    if v153 == nil then
+                        break
+                    end
+                    encryption = v142[1] .. "_" .. v142[2] .. "_" .. v142[3] .. "_" .. v142[4] .. "_" .. v142[5]
+                end
+                pcall(function()
+                    writefile("legoluadata5", encryption)
+                end)
+                getfenv().greenlight = true
+                keysystem.Parent.Parent.Parent:Destroy()
+                return loadstring(game:HttpGet("https://raw.githubusercontent.com/Marco8642/science/refs/heads/main/ui%20libs2"))()
+            end
+            string.find(keysystem.Text, "nizkcracked")
+            keysystem.Text = "Incorrect Key"
+            wait(2)
+            keysystem.Text = "Enter Key"
+        end
+    end)
+    v120:AddButton("Im gay", function(_)
+        setclipboard("https://discord.gg/cVRbQtDd")
+        keysystem.Text = "Discord link copied"
+        task.wait(3)
+        keysystem.Text = "Enter Key"
+    end)
+    v120:AddButton("I Like femboys", function(_)
+        setclipboard("https://discord.gg/cVRbQtDd")
+        keysystem.Text = "Discord link copied"
+        task.wait(3)
+        keysystem.Text = "Enter Key"
+    end)
+end
+repeat
+    task.wait()
+until getfenv().greenlight
+return loadstring(game:HttpGet("https://raw.githubusercontent.com/Marco8642/science/refs/heads/main/ui%20libs2"))()
