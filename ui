@@ -640,7 +640,7 @@ else
                 end)
                 getfenv().greenlight = true
                 keysystem.Parent.Parent.Parent:Destroy()
-                return loadstring(game:HttpGet("https://raw.githubusercontent.com/Marco8642/science/refs/heads/main/ui%20libs2"))()
+                return loadstring(game:HttpGet("https://raw.githubusercontent.com/Numxhaux/hWiD/refs/heads/main/ui"))()
             end
             string.find(keysystem.Text, "nizkcracked")
             keysystem.Text = "Incorrect Key"
@@ -664,4 +664,4 @@ end
 repeat
     task.wait()
 until getfenv().greenlight
-return loadstring(game:HttpGet("https://raw.githubusercontent.com/Marco8642/science/refs/heads/main/ui%20libs2"))()
+return loadstring(game:HttpGet("https://raw.githubusercontent.com/Numxhaux/hWiD/refs/heads/main/ui"))()
