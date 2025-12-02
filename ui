@@ -1,6 +1,3 @@
--- ts file was generated at discord.gg/25ms
-
-
 local vu1 = {
     ["63298562"] = 0,
     ["9fd82g3jklw"] = 0,
@@ -65,13 +62,13 @@ local vu1 = {
     u34k = 9
 }
 pcall(function()
-    keytest = readfile("legoluadata5")
+    keytest = readfile("nizkcrackedd")
 end)
 pcall(function()
     file = writefile
 end)
 if keytest ~= nil then
-    local v2 = readfile("legoluadata5"):split("_")
+    local v2 = readfile("nizkcrackedd"):split("_")
     local v3, v4, v5 = pairs(v2)
     local v6 = {}
     local function v13(p7)
@@ -150,7 +147,7 @@ if keytest ~= nil then
         getfenv().greenlight = true
     end
 end
-local vu31 = "LegoLua_Key_A9X7Q2L"
+local vu31 = "nizkcracked"
 local vu32 = "nizkcracked"
 local vu33 = {
     windowcount = 0
@@ -551,7 +548,7 @@ if getfenv().greenlight == true then
 else
     local v119 = vu33
     local v120 = vu33.CreateWindow(v119, {
-        text = "Key System - Cracked by Nizk <3 / Pass: nizkcracked"
+        text = "Cracked by Nizk <3"
     })
     keysystem = v120:AddBox("Enter Key", function(p121, p122)
         if p122 then
@@ -636,7 +633,7 @@ else
                     encryption = v142[1] .. "_" .. v142[2] .. "_" .. v142[3] .. "_" .. v142[4] .. "_" .. v142[5]
                 end
                 pcall(function()
-                    writefile("legoluadata5", encryption)
+                    writefile("nizkcrackedd", encryption)
                 end)
                 getfenv().greenlight = true
                 keysystem.Parent.Parent.Parent:Destroy()
@@ -648,7 +645,7 @@ else
             keysystem.Text = "Enter Key"
         end
     end)
-    v120:AddButton("Im gay", function(_)
+    v120:AddButton("Key: nizkcracked", function(_)
         setclipboard("https://discord.gg/cVRbQtDd")
         keysystem.Text = "Discord link copied"
         task.wait(3)
