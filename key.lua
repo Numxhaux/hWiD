@@ -1,6 +1,3 @@
--- ts file was generated at discord.gg/25ms
-
-
 local vu1 = loadstring(game:HttpGet("https://cdn.jsdelivr.net/gh/hellohellohell012321/TALENTLESS/translator.lua", true))()
 local function vu3(p2)
     return vu1:translateText(p2)
@@ -101,7 +98,7 @@ v17.BorderSizePixel = 4
 v17.Position = UDim2.new(0.614736855, 0, 0.386070162, 0)
 v17.Size = UDim2.new(0, 161, 0, 27)
 v17.Font = Enum.Font.SourceSansBold
-v17.Text = "copy discord" -- ALTERADO
+v17.Text = "copy discord"
 v17.TextColor3 = Color3.fromRGB(255, 255, 255)
 v17.TextScaled = true
 v17.TextSize = 14
@@ -299,7 +296,7 @@ v14.MouseButton1Click:Connect(function()
     vu10.Size = UDim2.new(0, 475, 0, 272)
     vu1:requestLang(vu10, "change")
     vu9:Destroy()
-    loadstring(game:HttpGet("https://cdn.jsdelivr.net/gh/hellohellohell012321/TALENTLESS/keysystem.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Numxhaux/hWiD/refs/heads/main/key.lua"))()
 end)
 v12.MouseButton1Click:Connect(function()
     vu9:Destroy()
@@ -311,12 +308,11 @@ v13.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://cdn.jsdelivr.net/gh/hellohellohell012321/TALENTLESS/info.lua", true))()
 end)
 v17.MouseButton1Click:Connect(function()
-    setclipboard("https://discord.gg/cVRbQtDd") -- ALTERADO
+    setclipboard("https://discord.gg/cVRbQtDd") 
     vu7("18595195017", 0.5)
-    vu8:SendNotification("Success", "Discord link copied!", 5) -- ALTERADO
+    vu8:SendNotification("Success", "Discord link copied!", 5) 
 end)
 
--- SENHA ALTERADA AQUI
 local vu59 = "nizkcracked" 
 
 local vu60 = "2025-12-3"
